@@ -19,6 +19,10 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
+app.use(cors({
+  origin: '*', 
+  credentials: true,
+}));
 
 // Rate limiting
 const limiter = rateLimit({
