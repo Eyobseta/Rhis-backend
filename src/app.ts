@@ -18,12 +18,8 @@ app.use(cors({
   origin: env.NODE_ENV === 'production' ? process.env.CLIENT_ORIGIN : '*',
   credentials: true,
 }));
-app.set('trust proxy', 1); 
+app.set('trust proxy', 1);
 app.use(express.json());
-app.use(cors({
-  origin: '*', 
-  credentials: true,
-}));
 
 // Rate limiting
 const limiter = rateLimit({
